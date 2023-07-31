@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PanteonDemo
+namespace KumkuatDemo
 {
     public static class EventManager
     {

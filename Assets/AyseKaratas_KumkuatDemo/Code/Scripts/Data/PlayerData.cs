@@ -22,5 +22,11 @@ public class TeamMember
 {
     public string Name;
     public uint Level;
+    public Team Team;
 }
 
+[Serializable]
+public class Match
+{
+    public Team[] Teams = new Team[2];
+}

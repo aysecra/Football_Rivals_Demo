@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace PanteonDemo
+namespace KumkuatDemo
 {
     public enum InputType
     {
