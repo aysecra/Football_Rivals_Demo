@@ -1,21 +1,38 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace KumkuatDemo
 {
-    public class Scroller : MonoBehaviour
+    public class Scroller : ObjectPool
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] private Transform _teamMembersContainer;
+        [SerializeField] private GameObject _characterButtonPrefab;
+        [SerializeField] private Scrollbar _scrollbar;
+
+        protected List<PoolableObject> scrollerElementList = new List<PoolableObject>();
+        private bool _isBeginScrollbar;
+
+        protected override void Start()
         {
-        
+            base.Start();
+            
+            for (int i = 0; i < amountToPool; i++)
+            {
+                var element =  GetPooledObject();
+                element.gameObject.SetActive(true);
+                scrollerElementList.Add(element);
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
-        
+            if (!_isBeginScrollbar && _scrollbar.value != 1)
+            {
+                _scrollbar.value = 1;
+                _isBeginScrollbar = true;
+            }
         }
     }
 }

@@ -7,10 +7,12 @@ namespace KumkuatDemo
 {
     public class ObjectPool : MonoBehaviour
     {
+        [SerializeField] private Transform _parentObject;
         [SerializeField] private PoolableObject _poolableObject;
         [SerializeField] private uint _amountToPool;
+        [SerializeField] private bool _isObjectActive;
         
-        private List<GameObject> _pooledObjects;
+        private List<PoolableObject> _pooledObjects;
 
         protected uint amountToPool
         {
@@ -21,22 +23,22 @@ namespace KumkuatDemo
 
         protected virtual void Start()
         {
-            _pooledObjects = new List<GameObject>();
+            _pooledObjects = new List<PoolableObject>();
             GameObject newObject;
             
             for(int i = 0; i < _amountToPool; i++)
             {
-                newObject = Instantiate(_poolableObject.gameObject, transform);
-                newObject.SetActive(false);
-                _pooledObjects.Add(newObject);
+                newObject = Instantiate(_poolableObject.gameObject, _parentObject);
+                newObject.SetActive(_isObjectActive);
+                _pooledObjects.Add(newObject.GetComponent<PoolableObject>());
             }
         }
         
-        public GameObject GetPooledObject()
+        public PoolableObject GetPooledObject()
         {
             for(int i = 0; i < _amountToPool; i++)
             {
-                if(!_pooledObjects[i].activeInHierarchy)
+                if(!_pooledObjects[i].gameObject.activeInHierarchy)
                 {
                     return _pooledObjects[i];
                 }

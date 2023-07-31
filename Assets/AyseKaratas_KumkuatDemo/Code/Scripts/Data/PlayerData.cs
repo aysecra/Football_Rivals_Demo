@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class PlayerData
 {
     public int LevelIndex;
     public string LevelName;
+    public Team CurrentTeam;
+    public int PlayerLevel;
 }
 
 [Serializable]
@@ -29,4 +32,11 @@ public class TeamMember
 public class Match
 {
     public Team[] Teams = new Team[2];
+}
+
+[Serializable]
+public class Attack
+{
+    public Match Match;
+    public Dictionary<TeamMember, TeamMember> AttackMambers = new Dictionary<TeamMember, TeamMember>();
 }

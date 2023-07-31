@@ -6,16 +6,10 @@ namespace KumkuatDemo
 {
     public class TeamController : Scroller
     {
-        // Start is called before the first frame update
-        void Start()
+        protected override void Start()
         {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
+            amountToPool = (uint) SharedLevelManager.Instance.TeamList.Count;
+            base.Start();
         }
     }
 }

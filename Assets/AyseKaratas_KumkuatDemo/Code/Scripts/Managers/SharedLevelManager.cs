@@ -9,5 +9,15 @@ namespace KumkuatDemo
         [SerializeField] private List<TeamMember> _teamMemberList = new List<TeamMember>();
 
         public List<Team> TeamList => _teamList;
+
+        public List<Match> GetRandomMatchList(uint Length)
+        {
+            return null;
+        }
+        
+        public Attack GetRandomMatchMembers(Match match)
+        {
+            return null;
+        }
     }
 }

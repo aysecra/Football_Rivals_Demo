@@ -27,7 +27,9 @@ namespace KumkuatDemo
                 _playerData = new PlayerData
                 {
                     LevelName = _levels[0].LevelName,
-                    LevelIndex = 0
+                    LevelIndex = 0,
+                    CurrentTeam = null,
+                    PlayerLevel = 1
                 };
             }
 
