@@ -151,11 +151,20 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4293328850
       objectReference: {fileID: 0}
+    - target: {fileID: 6556499244752905042, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6593532064424596682, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
       propertyPath: m_Name
-      value: TeamMemberElement
+      value: TeamMemberElement Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8989576824143232486, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
+      propertyPath: m_Name
+      value: Level
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6556499244752905042, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
 --- !u!114 &3213850504587399364 stripped
 MonoBehaviour:
@@ -173,7 +182,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6593532064424596682, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
   m_PrefabInstance: {fileID: 7426633815244613830}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7225278602244215770
+--- !u!114 &4459819344079648295
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,14 +191,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 4364087415365843980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0de46548f6f747e4ac87a3a459c47a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 77b60da090e12406ab97423fd5d68b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _lifeTime: 0
-  _imgTeam: {fileID: 6957306650307230520}
+  _imgMember: {fileID: 6957306650307230520}
   _txtName: {fileID: 4502189994398961462}
   _txtStar: {fileID: 3213850504587399364}
-  _txtTeamMember: {fileID: 8808937613681422796}
+  _txtMemberLevel: {fileID: 8808937613681422796}
 --- !u!114 &4502189994398961462 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6443043483559716848, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}

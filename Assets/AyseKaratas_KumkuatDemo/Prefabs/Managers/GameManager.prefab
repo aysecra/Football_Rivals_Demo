@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2152812037490010520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2152812037490010524}
+  - component: {fileID: 2152812037490010527}
+  - component: {fileID: 2152812037490010526}
+  - component: {fileID: 2152812037490010521}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2152812037490010524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152812037490010520}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2152812037490010527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152812037490010520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5280aa37b06f146c78badf5f3711a721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2152812037490010526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152812037490010520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d63f394591c546f8933a5ab2e0bf86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levels:
+  - LevelName: GameScene
+--- !u!114 &2152812037490010521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2152812037490010520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52a6dde6742f44b2a36a31a342978ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _teamList:
+  - Title: Team-1
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-2
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-3
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-4
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-5
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-6
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-7
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-8
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-9
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-10
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  - Title: Team-11
+    Image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    MaxTeamMember: 20
+    TeamMember: 0
+    Star: 1
+  _teamMemberList:
+  - Name: Member-1
+    Level: 1
+    Team: Team-1
+  - Name: Member-2
+    Level: 1
+    Team: Team-1
+  - Name: Member-3
+    Level: 1
+    Team: Team-1
+  - Name: Member-4
+    Level: 1
+    Team: Team-1
+  - Name: Member-5
+    Level: 1
+    Team: Team-1
+  - Name: Member-6
+    Level: 1
+    Team: Team-1
+  - Name: Member-7
+    Level: 1
+    Team: Team-1
+  - Name: Member-8
+    Level: 1
+    Team: Team-1
+  - Name: Member-9
+    Level: 1
+    Team: Team-1
+  - Name: Member-10
+    Level: 1
+    Team: Team-1

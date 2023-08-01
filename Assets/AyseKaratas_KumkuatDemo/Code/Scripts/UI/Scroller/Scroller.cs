@@ -16,7 +16,7 @@ namespace KumkuatDemo
 
         protected List<PoolableObject> scrollerElementList = new List<PoolableObject>();
         private bool _isBeginScrollbar;
-
+        
         private void Update()
         {
             if (_scrollerElementContainer.childCount > _maxScrollerElement)

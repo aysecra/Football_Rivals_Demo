@@ -19,5 +19,19 @@ namespace KumkuatDemo
         {
             return null;
         }
+
+        public List<TeamMember> GetTeamMembers(Team team)
+        {
+            List<TeamMember> members = new List<TeamMember>();
+            foreach (TeamMember teamMember in _teamMemberList)
+            {
+                if (teamMember.Team == team.Title)
+                {
+                    members.Add(teamMember);
+                }
+            }
+
+            return members;
+        }
     }
 }

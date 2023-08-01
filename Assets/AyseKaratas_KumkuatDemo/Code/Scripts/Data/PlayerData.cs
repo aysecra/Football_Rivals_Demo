@@ -26,8 +26,10 @@ public class Team
 public class TeamMember
 {
     public string Name;
-    public uint Level;
-    public Team Team;
+    public uint Level = 1;
+    [StringInList(typeof(PropertyDrawersHelper), "AllTeamNames")] public string Team;
+    public Sprite Image;
+    public uint Star;
 }
 
 [Serializable]
