@@ -20,7 +20,6 @@ namespace KumkuatDemo
             set => _amountToPool = value;
         }
 
-
         protected virtual void Start()
         {
             _pooledObjects = new List<PoolableObject>();

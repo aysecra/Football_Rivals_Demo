@@ -17,6 +17,8 @@ public class Team
 {
     public string Title;
     public Sprite Image;
+    public uint MaxTeamMember = 20;
+    public uint TeamMember = 0;
     public uint Star;
 }
 
