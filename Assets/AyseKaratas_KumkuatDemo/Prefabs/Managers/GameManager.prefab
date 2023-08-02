@@ -60,6 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levels:
   - LevelName: GameScene
+  _playerName: Developer Player
 --- !u!114 &2152812037490010521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,30 +133,50 @@ MonoBehaviour:
   - Name: Member-1
     Level: 1
     Team: Team-1
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-2
     Level: 1
     Team: Team-1
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-3
     Level: 1
     Team: Team-1
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-4
     Level: 1
     Team: Team-1
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-5
     Level: 1
     Team: Team-1
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-6
     Level: 1
-    Team: Team-1
+    Team: Team-2
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-7
     Level: 1
-    Team: Team-1
+    Team: Team-2
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-8
     Level: 1
-    Team: Team-1
+    Team: Team-2
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-9
     Level: 1
-    Team: Team-1
+    Team: Team-2
+    Image: {fileID: 0}
+    Star: 0
   - Name: Member-10
     Level: 1
-    Team: Team-1
+    Team: Team-2
+    Image: {fileID: 0}
+    Star: 0

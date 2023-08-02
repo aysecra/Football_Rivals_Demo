@@ -136,6 +136,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6443043483559716848, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
+      propertyPath: m_margin.y
+      value: -39.38377
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443043483559716848, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
+      propertyPath: m_margin.z
+      value: -1241.6549
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443043483559716848, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
       propertyPath: m_fontColor.b
       value: 0.90010566
       objectReference: {fileID: 0}

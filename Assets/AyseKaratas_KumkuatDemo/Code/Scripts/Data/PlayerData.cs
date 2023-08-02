@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 [Serializable]
@@ -8,8 +9,9 @@ public class PlayerData
 {
     public int LevelIndex;
     public string LevelName;
-    public Team CurrentTeam;
+    public string CurrentTeamName;
     public int PlayerLevel;
+    public string Name;
 }
 
 [Serializable]

@@ -6,17 +6,19 @@ using UnityEngine;
 namespace KumkuatDemo
 {
     public class GUIManager : Singleton<GUIManager>
-                                , EventListener<SelectTeamEvent>
-                                , EventListener<OpenTeamListEvent>
+        , EventListener<SelectTeamEvent>
+        , EventListener<OpenTeamListEvent>
     {
-        [Header("Core Elements")]
-        [SerializeField] private GameObject _teamArea;
+        [Header("Core Elements")] [SerializeField]
+        private GameObject _teamArea;
+
         [SerializeField] private GameObject _teamMemberArea;
         [SerializeField] private GameObject _teamMatchArea;
         [SerializeField] private GameObject _teamAttackArea;
 
-        [Header("Script Elements")]
-        [SerializeField] private TeamController _teamAreaScript;
+        [Header("Script Elements")] [SerializeField]
+        private TeamController _teamAreaScript;
+
         [SerializeField] private TeamMemberController _teamMemberAreaScript;
         [SerializeField] private MatchController _teamMatchAreaScript;
         [SerializeField] private AttackUIController _teamAttackAreaScript;
@@ -69,13 +71,14 @@ namespace KumkuatDemo
         {
             EventManager.EventStopListening<SelectTeamEvent>(this);
             EventManager.EventStopListening<OpenTeamListEvent>(this);
-
         }
 
         public void OnEventTrigger(SelectTeamEvent currentEvent)
         {
             OpenTeamMemberArea();
-            _teamMemberAreaScript.GetTeamMemberValues(currentEvent.Team);
+            Team team = SharedLevelManager.Instance.GetTeam(currentEvent.Team);
+            if (team != null)
+                _teamMemberAreaScript.GetTeamMemberValues(team);
         }
 
         public void OnEventTrigger(OpenTeamListEvent currentEvent)

@@ -23,14 +23,19 @@ namespace KumkuatDemo
         protected virtual void Start()
         {
             _pooledObjects = new List<PoolableObject>();
-            GameObject newObject;
             
             for(int i = 0; i < _amountToPool; i++)
             {
-                newObject = Instantiate(_poolableObject.gameObject, _parentObject);
-                newObject.SetActive(_isObjectActive);
-                _pooledObjects.Add(newObject.GetComponent<PoolableObject>());
+                AddNewObject();
             }
+        }
+
+        private void AddNewObject()
+        {
+            GameObject newObject = Instantiate(_poolableObject.gameObject, _parentObject);
+            newObject.SetActive(_isObjectActive);
+            PoolableObject newPoolableObject = newObject.GetComponent<PoolableObject>();
+            _pooledObjects.Add(newPoolableObject);
         }
         
         public PoolableObject GetPooledObject()
@@ -42,7 +47,9 @@ namespace KumkuatDemo
                     return _pooledObjects[i];
                 }
             }
-            return null;
+            
+            AddNewObject();
+            return _pooledObjects[^1];
         }
     }
 }

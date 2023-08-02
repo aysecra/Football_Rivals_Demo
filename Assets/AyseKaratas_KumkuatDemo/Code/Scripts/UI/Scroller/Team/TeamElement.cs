@@ -10,9 +10,9 @@ namespace KumkuatDemo
     /// </summary>
     public struct SelectTeamEvent
     {
-        public Team Team;
+        public string Team;
 
-        public SelectTeamEvent(Team team)
+        public SelectTeamEvent(string team)
         {
             Team = team;
         }
@@ -38,7 +38,7 @@ namespace KumkuatDemo
 
         public void OnButtonClick()
         {
-            EventManager.TriggerEvent(new SelectTeamEvent(_currentTeam));
+            EventManager.TriggerEvent(new SelectTeamEvent(_currentTeam.Title));
         }
         
     }

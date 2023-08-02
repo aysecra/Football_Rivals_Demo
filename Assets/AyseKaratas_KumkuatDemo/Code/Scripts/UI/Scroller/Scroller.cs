@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -16,7 +17,7 @@ namespace KumkuatDemo
 
         protected List<PoolableObject> scrollerElementList = new List<PoolableObject>();
         private bool _isBeginScrollbar;
-        
+
         private void Update()
         {
             if (_scrollerElementContainer.childCount > _maxScrollerElement)
@@ -28,16 +29,19 @@ namespace KumkuatDemo
                 }
             }
         }
-        
+
         protected virtual void SetTeamPadding()
         {
-            if(scrollerElementList.Count>0)
-            {
-                int newTopPointValue = (int) (scrollerElementList[0].transform.position.y - _topPoint.position.y);
-
-                _scrollerGridLayoutGroup.padding.top =
-                    _scrollerElementContainer.childCount > _maxScrollerElement ? 0 : newTopPointValue;
-            }
+            // if (scrollerElementList.Count > 0)
+            // {
+            //     scrollerElementList = scrollerElementList.OrderBy(element => element.transform.position.y).ToList();
+            //     
+            //     int newTopPointValue = (int) (scrollerElementList[0].transform.position.y - _topPoint.position.y);
+            //
+            //     if (newTopPointValue < 0)
+            //         _scrollerGridLayoutGroup.padding.top =
+            //             scrollerElementList.Count > _maxScrollerElement ? 0 : newTopPointValue;
+            // }
         }
     }
 }
