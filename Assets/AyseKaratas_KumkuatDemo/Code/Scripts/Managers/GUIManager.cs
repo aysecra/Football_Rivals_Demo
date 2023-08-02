@@ -8,6 +8,7 @@ namespace KumkuatDemo
     public class GUIManager : Singleton<GUIManager>
         , EventListener<SelectTeamEvent>
         , EventListener<OpenTeamListEvent>
+        , EventListener<OpenMatchListEvent>
     {
         [Header("Core Elements")] [SerializeField]
         private GameObject _teamArea;
@@ -26,7 +27,14 @@ namespace KumkuatDemo
 
         private void Start()
         {
-            OpenTeamArea();
+            if (ProgressManager.Instance.GetCurrentTeam() == "")
+            {
+                OpenTeamArea();
+            }
+            else
+            {
+                OpenMatchArea();
+            }
         }
 
         private void OpenTeamArea()
@@ -48,8 +56,8 @@ namespace KumkuatDemo
         private void OpenMatchArea()
         {
             _teamArea.SetActive(false);
-            _teamMemberArea.SetActive(true);
-            _teamMatchArea.SetActive(false);
+            _teamMemberArea.SetActive(false);
+            _teamMatchArea.SetActive(true);
             _teamAttackArea.SetActive(false);
         }
 
@@ -65,12 +73,14 @@ namespace KumkuatDemo
         {
             EventManager.EventStartListening<SelectTeamEvent>(this);
             EventManager.EventStartListening<OpenTeamListEvent>(this);
+            EventManager.EventStartListening<OpenMatchListEvent>(this);
         }
 
         private void OnDisable()
         {
             EventManager.EventStopListening<SelectTeamEvent>(this);
             EventManager.EventStopListening<OpenTeamListEvent>(this);
+            EventManager.EventStopListening<OpenMatchListEvent>(this);
         }
 
         public void OnEventTrigger(SelectTeamEvent currentEvent)
@@ -84,6 +94,11 @@ namespace KumkuatDemo
         public void OnEventTrigger(OpenTeamListEvent currentEvent)
         {
             OpenTeamArea();
+        }
+
+        public void OnEventTrigger(OpenMatchListEvent currentEvent)
+        {
+            OpenMatchArea();
         }
     }
 }

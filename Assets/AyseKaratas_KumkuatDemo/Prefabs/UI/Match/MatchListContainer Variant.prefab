@@ -8,8 +8,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1366730631895706158, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
+      propertyPath: m_Size
+      value: 0.9917973
+      objectReference: {fileID: 0}
+    - target: {fileID: 1366730631895706158, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1799685344843947330, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -153,16 +157,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2088322518733066702, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
-      propertyPath: m_Spacing.y
-      value: 156.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2088322518733066702, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
-      propertyPath: m_CellSize.y
-      value: 53.8
-      objectReference: {fileID: 0}
     - target: {fileID: 2088322518733066703, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088322518733066703, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2088322518733066704, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
@@ -243,5 +243,6 @@ MonoBehaviour:
   _scrollerGridLayoutGroup: {fileID: 5743409789544445119}
   _scrollerElementContainer: {fileID: 5743409789544445118}
   _scrollbar: {fileID: 4735566647476965215}
-  _maxScrollerElement: 9
+  _maxScrollerElement: 7
   _topPoint: {fileID: 3378611727519635966}
+  _matchLength: 8

@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace KumkuatDemo
 {
@@ -19,13 +21,35 @@ namespace KumkuatDemo
 
         private TeamMember _player;
 
-        public List<Match> GetRandomMatchList(uint Length)
+        public List<Match> GetRandomMatchList(uint length)
         {
-            return null;
-        }
+            length = _teamList.Count > length ? length : (uint) (_teamList.Count - 2);
+            string currTeam = ProgressManager.Instance.GetCurrentTeam();
+            if (currTeam != "")
+            {
+                List<Match> matchList = new List<Match>();
+                List<Team> tempList =_teamList;
+                Team currTeamScript = GetTeam(currTeam);
+                tempList.Remove(currTeamScript);
 
-        public Attack GetRandomMatchMembers(Match match)
-        {
+                for (int i = 0; i < length; i++)
+                {
+                    int randomIndex = Random.Range(0, tempList.Count);
+                    Team team = tempList[randomIndex];
+                    tempList.RemoveAt(randomIndex);
+                    matchList.Add(new Match()
+                    {
+                        Teams = new[]
+                        {
+                            currTeamScript,
+                            team
+                        }
+                    });
+                }
+
+                return matchList;
+            }
+
             return null;
         }
 

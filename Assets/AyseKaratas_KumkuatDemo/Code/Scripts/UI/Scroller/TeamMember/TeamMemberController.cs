@@ -17,6 +17,7 @@ namespace KumkuatDemo
     {
         [SerializeField] private TextMeshProUGUI _txtTitle;
         [SerializeField] private GameObject _btnJoinObject;
+        [SerializeField] private GameObject _btnTransferObject;
 
         private Team _currentTeam;
         private bool _isStart = false;
@@ -50,10 +51,12 @@ namespace KumkuatDemo
             if (ProgressManager.Instance.GetCurrentTeam() == team.Title)
             {
                 _btnJoinObject.SetActive(false);
+                _btnTransferObject.SetActive(true);
             }
             else
             {
                 _btnJoinObject.SetActive(true);
+                _btnTransferObject.SetActive(false);
             }
 
 
@@ -92,13 +95,26 @@ namespace KumkuatDemo
 
         public void OnClickBackButton()
         {
-            EventManager.TriggerEvent(new OpenTeamListEvent());
+            if (ProgressManager.Instance.GetCurrentTeam() == "")
+            {
+                EventManager.TriggerEvent(new OpenTeamListEvent());
+            }
+            else
+            {
+                EventManager.TriggerEvent(new OpenMatchListEvent());
+            }
         }
 
         public void OnClickJoinButton()
         {
             _btnJoinObject.SetActive(false);
+            _btnTransferObject.SetActive(true);
             ProgressManager.Instance.SetCurrentTeam(_currentTeam);
+        }
+
+        public void OnClickTransferButton()
+        {
+            EventManager.TriggerEvent(new OpenTeamListEvent());
         }
 
         private void OnEnable()
