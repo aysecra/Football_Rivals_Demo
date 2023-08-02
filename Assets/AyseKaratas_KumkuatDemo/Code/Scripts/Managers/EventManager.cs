@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace KumkuatDemo
 {
+    // event manager returning struct type element
     public static class EventManager
     {
         private static Dictionary<Type, List<IEventListener>> _listenerDictionary;

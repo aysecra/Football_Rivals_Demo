@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1366730631895706158, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
       propertyPath: m_Size
-      value: 0.9917973
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1366730631895706158, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
       propertyPath: m_Value
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1799685344843947330, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
       propertyPath: m_AnchorMax.x

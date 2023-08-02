@@ -9,6 +9,8 @@ namespace KumkuatDemo
         , EventListener<SelectTeamEvent>
         , EventListener<OpenTeamListEvent>
         , EventListener<OpenMatchListEvent>
+        , EventListener<OpenAttackListEvent>
+        , EventListener<SelectMatchEvent>
     {
         [Header("Core Elements")] [SerializeField]
         private GameObject _teamArea;
@@ -74,6 +76,8 @@ namespace KumkuatDemo
             EventManager.EventStartListening<SelectTeamEvent>(this);
             EventManager.EventStartListening<OpenTeamListEvent>(this);
             EventManager.EventStartListening<OpenMatchListEvent>(this);
+            EventManager.EventStartListening<OpenAttackListEvent>(this);
+            EventManager.EventStartListening<SelectMatchEvent>(this);
         }
 
         private void OnDisable()
@@ -81,6 +85,8 @@ namespace KumkuatDemo
             EventManager.EventStopListening<SelectTeamEvent>(this);
             EventManager.EventStopListening<OpenTeamListEvent>(this);
             EventManager.EventStopListening<OpenMatchListEvent>(this);
+            EventManager.EventStopListening<OpenAttackListEvent>(this);
+            EventManager.EventStopListening<SelectMatchEvent>(this);
         }
 
         public void OnEventTrigger(SelectTeamEvent currentEvent)
@@ -99,6 +105,19 @@ namespace KumkuatDemo
         public void OnEventTrigger(OpenMatchListEvent currentEvent)
         {
             OpenMatchArea();
+        }
+
+        public void OnEventTrigger(OpenAttackListEvent currentEvent)
+        {
+            OpenAttackArea();
+        }
+
+        public void OnEventTrigger(SelectMatchEvent currentEvent)
+        {
+            OpenAttackArea();
+            Attack attack = SharedLevelManager.Instance.GetRandomAttackList(currentEvent.Match);
+            if (attack != null)
+                _teamAttackAreaScript.GetAttackValues(attack);
         }
     }
 }

@@ -673,6 +673,18 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6556499244752905042, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -1108899692531080021}
+    - target: {fileID: 6556499244752905042, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickMatchButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556499244752905042, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: KumkuatDemo.MatchElement, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6593532064424596682, guid: 7e3f7bc0839664f8f8fd146ce6dc4aac, type: 3}
       propertyPath: m_Name
       value: MatchElement Variant

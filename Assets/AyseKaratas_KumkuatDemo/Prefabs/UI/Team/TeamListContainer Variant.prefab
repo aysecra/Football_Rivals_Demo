@@ -119,6 +119,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2088322518733066702, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
+      propertyPath: m_Spacing.y
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088322518733066702, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2088322518733066703, guid: 1105d5333bae6458b8c31fc4acd949f1, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0

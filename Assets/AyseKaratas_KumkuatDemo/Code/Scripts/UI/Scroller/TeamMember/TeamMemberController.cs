@@ -39,13 +39,14 @@ namespace KumkuatDemo
             scrollerElementList.Clear();
         }
 
-
+        // change elements of team member list area
         private void UpdateTeamMemberValues()
         {
             GetMemberValues(_currentTeam);
             SetTeamPadding();
         }
 
+        // get all value according to user's team or not
         public void GetTeamMemberValues(Team team)
         {
             if (ProgressManager.Instance.GetCurrentTeam() == team.Title)
@@ -68,6 +69,7 @@ namespace KumkuatDemo
             SetTeamPadding();
         }
 
+        // get team members that need to be shown
         private void GetMemberValues(Team team)
         {
             _currentTeam = team;

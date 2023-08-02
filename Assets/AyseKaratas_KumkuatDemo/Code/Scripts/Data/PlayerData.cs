@@ -44,5 +44,6 @@ public class Match
 public class Attack
 {
     public Match Match;
-    public Dictionary<TeamMember, TeamMember> AttackMambers = new Dictionary<TeamMember, TeamMember>();
+    public List<TeamMember> Team1;
+    public List<TeamMember> Team2;
 }

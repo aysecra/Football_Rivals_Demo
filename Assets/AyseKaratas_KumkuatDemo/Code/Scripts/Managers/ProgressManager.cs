@@ -21,6 +21,8 @@ namespace KumkuatDemo
         private const string _playerDataPrefKey = "PlayerData";
         private TeamMember _playerTeamMember;
 
+        public string PlayerName => _playerName;
+
         protected override void Awake()
         {
             base.Awake();
@@ -48,13 +50,14 @@ namespace KumkuatDemo
                     {
                         Name = _playerName,
                         Level = (uint) _playerData.PlayerLevel,
-                        Team = team.Title
+                        Team = _playerData.CurrentTeamName
                     };
                     SharedLevelManager.Instance.AddPlayerToTeam(team, _playerTeamMember);
                 }
             }
         }
 
+        // save data
         private void SetPlayerData()
         {
             PlayerPrefs.SetString(_playerDataPrefKey, JsonUtility.ToJson(_playerData));
@@ -83,7 +86,7 @@ namespace KumkuatDemo
         {
             return _playerData.CurrentTeamName;
         }
-
+        
         public void SetCurrentTeam(Team team)
         {
             _playerData.CurrentTeamName = team.Title;
